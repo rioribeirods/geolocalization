@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import style from "./App.module.css"
 
 function App() {
   const [location, setLocation] = useState({})
@@ -17,10 +17,10 @@ function App() {
 
   return (
 
-     <>
-        Latitude: {location.latitude} <br />
-        Longitude: {location.longitude}
-     </>
+     <div className={style.box}>
+        <p className={style.dado}>Latitude: {location.latitude}</p>
+        <p className={style.dado}>Longitude: {location.longitude}</p>
+     </div>
      
   )
 }
